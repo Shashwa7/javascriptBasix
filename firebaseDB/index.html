@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        .container{
+            max-width: 500px;
+        }
+        button{
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-primary text-center my-3">Recipe Book</h1>
+
+    <!--Basic page setup using bstrp-->
+    <div class="container my-5">
+        <h2 class="my-3">Recipes</h2>
+        <ul class="list-group">
+            <!--Fetch recipe from the db-->
+        </ul>
+
+        <form class="my-3">
+            <label for="recepie">Add a new recipe:</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id='recipe' required>
+                <div class="input-group-append">
+                    <input type="submit" value="add" class="btn btn-outline-secondary">
+                </div>
+        </form>
+    </div>
+    
+    <button class="btn btn-outline-secondary unsub">Deactivate Real time </button>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyC30WBzVrNNY_Q6b3pHPH-1LXDS5cGgWi4",
+            authDomain: "dbbasix.firebaseapp.com",
+            databaseURL: "https://dbbasix.firebaseio.com",
+            projectId: "dbbasix",
+            storageBucket: "dbbasix.appspot.com",
+            messagingSenderId: "885684711319",
+            appId: "1:885684711319:web:784fc275b56fe2ee5bded2",
+            measurementId: "G-L37V8KXGW9"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        //creating db object/instance inorder to interact with our db or initializng connection
+        const db = firebase.firestore(); 
+    </script>
+
+    <script src='realTimeFetch.js'></script>
+    <script src='storeData2DB.js'></script>
+    <script src="deleteDoc.js"></script>
+    <script src='unsub.js'></script>
+</body>
+
+
+</html>

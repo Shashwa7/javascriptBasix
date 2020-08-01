@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent CHild Selector</title>
+    <style>
+        .article-elements {
+            padding: 10px;
+            color: crimson;
+            border: 0.5px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Parent Child Selector</h1>
+    <article>
+        <h2>Article head</h2>
+        <p>Para 1</p>
+        <p>Para 2</p>
+        <p>para 3</p>
+    </article>
+
+    <!-- js code -->
+    <script>
+
+        //grabbing child 
+        const article = document.querySelector('article');
+        console.log(article.children);  //retrives its children in html Collection format
+
+        //we can't iterate html collection using foreaach
+        // so type casting it into array first
+
+        Array.from(article.children).forEach(child => {
+            //adding class to each child element of article
+            child.classList.add('article-elements');
+        });
+
+
+        //grabbing parent
+        const title = document.querySelector('h2');
+
+        console.log(title.parentElement); //look for the parent that contains this h2 elments o/p: <article>
+
+        console.log(title.parentElement.parentElement);
+        // h2 > article > body
+
+
+
+        //grabbing sibiling
+        console.log(title.nextElementSibling); // next to h2 > p[0]; o/p: p
+        console.log(article.previousElementSibling); // any tag before article but in the same container. in this case body > h1[0] - article[1]; o/p: h1
+    </script>
+</body>
+
+</html>

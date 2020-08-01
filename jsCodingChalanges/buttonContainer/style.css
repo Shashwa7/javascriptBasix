@@ -1,0 +1,14 @@
+#btns{
+width: 75%
+}
+#btn5{
+    background-color: black;
+    color: crimson;
+    font-size: 1rem;
+}
+
+button{
+    width:30%;
+    height: 48px;
+    font-size: 24px;
+}

@@ -1,0 +1,19 @@
+2 ways of storing application data:
+> Set up a databse to store and retrieve data;
+> use local storage(on the browser) to store ans retrive data.
+
+> local storage is provided by the browser in order to store data and retrive data to and from the browser itself.
+> Generally the user's data is lost on browser refresh, so using local storage can help in storing data in the browser and even after refreshing the browser the data can be injected back to the wepage.
+
+>LocalStorage API is stored on the windows object inside the browser.
+>it stores data in the string format somewhat like array object. 
+
+> LocalStorage has some properties like:
+    >length:  specifies the legth of the array objects; 
+    >setItem: to add/store/update item/data to the local storage.
+    >getItem: to retrieve item/data from the local storage.
+    >removeItem: removes stored items/data from the local storage.
+
+> In order to use LocalStorage API you must enter the below text:
+
+'windows.localStorage' or simply just 'localStorage' cuz we know that windows is a global object.

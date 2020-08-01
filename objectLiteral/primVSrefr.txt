@@ -1,0 +1,28 @@
+Primitive types - boolean, number, string, null, undefined, symbols
+
+Refernced types(all object types) - object literals, arrays, functions, date etc;
+
+- Primitive type var -
+> when we declar/define a primitive variable its value is stored in stack.
+
+> the variable is sort of locked with its value in a assigned memory block.
+
+> quick access.
+
+> But,stack has limited memory blocks.
+
+- Refernece type var -
+> when we create refernece type  object literal/array/function it is rather stored in heap memory.
+
+> for accessing any object/object var from the heap a pointer is declared in the stack locked with the var name, which points to that particular object from the heap memory.
+
+> comparitively slow access
+
+> unlimited memory
+
+
+-- other notes --
+> if a primitive type var copies other primitive type var, a seperate memory block is assigned to it.
+> any change made in the original varible value will not affect the value of derived or coppied var and vice versa.
+
+> but if we decalre an object and initialize it with a copy of already existing object then any change made in the original object will be reflected in the derived object as well, cuz both of the object variables in the stack are pointing to the same object in the heap.

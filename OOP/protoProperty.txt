@@ -1,0 +1,21 @@
+what '__proto_' property actually is ?
+ 
+ > Every object in JS has a prototype including user define objects.
+ > Prototypes contains all the methods for that object type.
+
+
+eg: 
+> Array obj prototype(__proto__): sort(), filter() etc.
+> Date obj prototype(__proto__): getDay(), getMonth() etc. 
+
+inorder to look for menthods that paraticular object has access to we can use '.prototype' keyword;
+
+eg: Array.prototype; > will show all methods that an array obj can access, like filter(), map(), slice()
+
+> why we want to add functions/methods in the object's '__proto__' ?
+
+> 2 benifits:
+1> efficient fetch; as all methods are stored in the single place. Not in many different locations as we create new obj instance using the constructor.
+
+2> It will help in prototyple inheritance.
+
